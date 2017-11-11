@@ -21,6 +21,7 @@ while not done:
         factors.append(x)
         num = num / x
         if isPrime(num):
+            factors.append(num)
             done = True
         else:
             i = 0
