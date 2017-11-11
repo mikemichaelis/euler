@@ -21,13 +21,13 @@ while not done:
         factors.append(x)
         num = num / x
         if isPrime(num):
-            factors.append(num)
+            factors.append(int(num))
             done = True
         else:
             i = 0
     else:
         i = i + 1
 
-print(factors)
+print(factors[-1])
 
 
