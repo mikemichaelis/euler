@@ -21,7 +21,11 @@ while not done:
         factors.append(x)
         num = num / x
         if isPrime(num):
-            factors.append(int(num))
+            # just realized this bug viewing the code online
+            # only add num if num > x becaues we want the largest prime factor
+            # unfortunately with this bug the correct answer was still producted, so it went unnoticed initially
+            if num > x:
+                factors.append(int(num))
             done = True
         else:
             i = 0
