@@ -18,8 +18,10 @@ while not done:
 
     x = primes[i]
     if num % x == 0:
+        
         factors.append(x)
         num = num / x
+        # if num is prime we have two prime numbers that produce num, so we are done factoring
         if isPrime(num):
             # just realized this bug viewing the code online
             # only add num if num > x becaues we want the largest prime factor
@@ -28,10 +30,15 @@ while not done:
                 factors.append(int(num))
             done = True
         else:
+            # restart factoring at the first prime number
             i = 0
     else:
+        # move to the next prime number
         i = i + 1
 
+# I should sort this list as it's possible for a large prime to get buried at the bottom of the list and be replaced by a lower prime
+# when we reset i = 0 and start iterating the primes again.....
+# this bug went unnoticed initially as the algorithm initially produced the correct max prime factor. ugh.
 print(factors[-1])
 
 
