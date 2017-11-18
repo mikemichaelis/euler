@@ -11,8 +11,8 @@ b = 100
 largest = 0
 
 # start with largest numbers first to exclude calling isPalindrome() for smaller products
-for a in range(999, 100, -1):
-    for b in range(999, 100, -1):
+for a in range(999, 99, -1):
+    for b in range(999, 99, -1):
         product = a * b
         # check the product is larger than current largest
         if(product > largest):
@@ -20,5 +20,3 @@ for a in range(999, 100, -1):
                 largest = product
 
 print(largest)
-
-
