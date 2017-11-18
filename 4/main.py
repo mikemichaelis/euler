@@ -6,11 +6,9 @@ def isPalindrome(n):
     m = str(n)
     return m == m[::-1]
 
-a = 100
-b = 100
-largest = 0
 
-# start with largest numbers first to exclude calling isPalindrome() for smaller products
+largest = 0
+# start with large numbers first to exclude calling isPalindrome() for smaller products
 for a in range(999, 99, -1):
     for b in range(999, 99, -1):
         product = a * b
