@@ -4,23 +4,20 @@
 # going the easy string route...easy to read, easy to maintain, easy to understand, easy to code.....
 def isPalindrome(n):
     m = str(n)
-    if( m == m[::-1] ):
-        return True;
-    else:
-        return False;
+    return m == m[::-1]
 
 a = 100
 b = 100
 largest = 0
 
-while a <= 999:
-    while b <= 999:
-        product = a * b;
-        if(isPalindrome(product) == True):
-            if(product > largest): largest = product
-        b = b + 1
-    a = a + 1
-    b = 100
+# start with largest numbers first to exclude calling isPalindrome() for smaller products
+for a in range(999, 100, -1):
+    for b in range(999, 100, -1):
+        product = a * b
+        # check the product is larger than current largest
+        if(product > largest):
+            if(isPalindrome(product) == True):
+                largest = product
 
 print(largest)
 
