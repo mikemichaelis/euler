@@ -8,3 +8,5 @@ Project Euler is a series of challenging mathematical/computer programming probl
 The motivation for starting Project Euler, and its continuation, is to provide a platform for the inquiring mind to delve into unfamiliar areas and learn new concepts in a fun and recreational context.
 
 Read more..... https://projecteuler.net/
+
+Happy luck!
