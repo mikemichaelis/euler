@@ -9,4 +9,5 @@ The motivation for starting Project Euler, and its continuation, is to provide a
 
 Read more..... https://projecteuler.net/
 
+Happy luck!
 good luck
